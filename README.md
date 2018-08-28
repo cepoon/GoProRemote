@@ -28,7 +28,7 @@ Offset | Size | Field | Comments
 0xd | n | Parameter | Additional parameter for command, usually 1 byte
 
 ### Respond packet
-Response packet should be at least 14 bytes unless the command was deemed invalid.
+Response packet should be at least 14 bytes
 
 Offset | Size | Field | Comments
 ------ | ---- | ----- | --------
@@ -36,7 +36,7 @@ Offset | Size | Field | Comments
 0x8 | 1 | Flag | echoed the flag value of the original command
 0x9 | 2 | ID | echoed the ID/sequence of the original command
 0xb | 2 | Command | echoed the original command
-0xd | 1 | Invalid | sets to 1 if the command failed to execute - payload ends here in this case
+0xd | 1 | Invalid | sets to 1 if the command failed to execute
 0xe | n | Return | Data returned by the command, generally matching the original parameter.
 
 ## Implementation
