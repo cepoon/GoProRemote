@@ -1,5 +1,6 @@
 # GoProRemote
 Controlling a GoPro camera via Wifi RC mode
+2019-03-15: RC mode in Hero 5 and above seems to work differently, and predominantly over BLE. However, BLE pairing in RC mode on Hero 5 seems to suggest that the Smart Remote acts as a peripheral device while the camera acts as a central device. If there is someone that has access to the Smart Remote it would help to produce a dump of the available Bluetooth Service / Characteristics on the remote during pairing. The only command available in Hero 5 over WiFi-RC is "CV" and everything else is ignored (no reply)
 
 ## Context
 The discovery code was tested against a GoPro Hero 3+ Silver but the believe is that this protocol hasn't changed and thus usable against the current line up of GoPros capable of using Wifi RC mode (Hero 2018 apparently excluded as it might be GoPro App mode only)
